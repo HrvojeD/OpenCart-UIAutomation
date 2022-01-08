@@ -1,6 +1,5 @@
 Feature: Visitor user can search for products
 
-  @tag
   Scenario Outline: Visitor can use the search functionality to search for items
 
     Given user is on store front page
@@ -10,7 +9,7 @@ Feature: Visitor user can search for products
 
     Examples:
       |  item  |
-      |  Mac   |
+      |  iMac  |
       |  Nikon |
 
 

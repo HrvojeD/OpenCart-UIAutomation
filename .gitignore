@@ -156,3 +156,14 @@ gradle-app.setting
 **/build/
 
 # End of https://www.toptal.com/developers/gitignore/api/java,gradle,intellij
+.gradle/7.1/executionHistory/executionHistory.bin
+.idea/compiler.xml
+.idea/gradle.xml
+.idea/misc.xml
+target/htmlReport.html
+.gradle/7.1/executionHistory/executionHistory.lock
+.gradle/7.1/fileHashes/fileHashes.bin
+.gradle/7.1/fileHashes/fileHashes.lock
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
+.gradle/buildOutputCleanup/outputFiles.bin
+.gradle/checksums/checksums.lock

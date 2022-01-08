@@ -5,11 +5,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class AuthenticationSteps {
+import static demoOpenCart.util.TestInitialization.sharedPagePO;
 
-    @And("clicks the Login button")
-    public void clicksTheLoginButton() {
-    }
+public class AuthenticationSteps {
 
     @And("enters valid credentials")
     public void entersValidCredentials() {
@@ -21,10 +19,6 @@ public class AuthenticationSteps {
 
     @Given("user is logged in to the store")
     public void userIsLoggedInToTheStore() {
-    }
-
-    @And("click the Logout button")
-    public void clickTheLogoutButton() {
     }
 
     @Then("user will be logged out")

@@ -1,10 +1,12 @@
 package demoOpenCart.stepdefinitions;
 
 import demoOpenCart.util.Settings;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 
 import static demoOpenCart.util.TestInitialization.driver;
+import static demoOpenCart.util.TestInitialization.sharedPagePO;
 
 public class SharedSteps {
 
@@ -15,5 +17,24 @@ public class SharedSteps {
 
     @When("user click the My Account button")
     public void userClickTheMyAccountButton() {
+        sharedPagePO.clickMyAccountButton();
     }
+
+    @And("clicks the Register button")
+    public void clicksTheRegisterButton() {
+        sharedPagePO.clickRegisterButton();
+    }
+
+    @And("clicks the Login button")
+    public void clicksTheLoginButton() {
+        sharedPagePO.clickMyAccountButton()
+                    .clickLoginButton();
+    }
+
+    @And("click the Logout button")
+    public void clickTheLogoutButton() {
+        sharedPagePO.clickMyAccountButton()
+                .clickLogoutButton();
+    }
+
 }
