@@ -12,7 +12,7 @@ public class ChromeDriverManager extends DriverManager{
     true = browser window is hidden and the test steps are not visible
     false = browser window is displayed and the test steps are visible
      */
-    boolean headless = false;
+    boolean headless = true;
 
     //setting ChromeOptions and creating new ChromeDriver
     @Override
@@ -30,7 +30,7 @@ public class ChromeDriverManager extends DriverManager{
         options.addArguments("disable-features=NetworkService");
 
         options.setHeadless(headless);
-        options.addArguments(headless ? "--window-size=1920,1080" : "--start-maximized");
+        options.addArguments(headless ? "--window-size=1920,1080" : "--kiosk");
 
         this.driver = new ChromeDriver(options);
     }

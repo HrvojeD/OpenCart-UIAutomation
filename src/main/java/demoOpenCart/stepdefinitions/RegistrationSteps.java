@@ -1,5 +1,6 @@
 package demoOpenCart.stepdefinitions;
 
+import demoOpenCart.util.Settings;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
@@ -39,13 +40,16 @@ public class RegistrationSteps {
 
     @And("checks the Privacy Policy checkbox")
     public void checksThePrivacyPolicyCheckbox() {
+        registerAccountPO.checkPrivacyPolicyCheckbox();
     }
 
     @And("clicks Continue")
     public void clicksContinue() {
+        registerAccountPO.clickContinueButton();
     }
 
     @Then("new account will be created")
     public void newAccountWillBeCreated() {
+        registerAccountPO.verifySuccessMessage(Settings.ACCOUNT_CREATED_MESSAGE);
     }
 }

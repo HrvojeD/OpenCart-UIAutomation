@@ -14,14 +14,14 @@ public class Helpers {
 
     //function that checks if the element is visible on the page
     public static void waitForElementVisibility(WebDriver driver, WebElement element) {
-        new WebDriverWait(driver, Duration.ofSeconds(20))
+        new WebDriverWait(driver, Duration.ofSeconds(5))
                 .pollingEvery(Duration.ofMillis(100))
                 .until(ExpectedConditions.visibilityOf(element));
     }
 
     //function that checks if the element is clickable
     public static void waitUntilElementIsClickable(WebDriver driver, WebElement element) {
-        new WebDriverWait(driver, Duration.ofSeconds(20))
+        new WebDriverWait(driver, Duration.ofSeconds(5))
                 .pollingEvery(Duration.ofMillis(100))
                 .until(ExpectedConditions.elementToBeClickable(element));
     }

@@ -22,6 +22,6 @@ Feature: Visitor user can search for products
     Then results will appear
 
     Examples:
-      |  item  |
-      |  iPhone   |
+      |  item   |
+      |  iPhone |
       |  Galaxy |

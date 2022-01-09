@@ -1,10 +1,14 @@
 package demoOpenCart.pageObjects;
 
 import demoOpenCart.util.Helpers;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import static demoOpenCart.util.Helpers.waitForElementVisibility;
+import static demoOpenCart.util.Helpers.waitUntilElementIsClickable;
 
 public class RegisterAccountPO {
 
@@ -39,34 +43,60 @@ public class RegisterAccountPO {
     @FindBy(id = "input-confirm")
     WebElement pwConfirmationTxtField;
 
+    //locator for 'Agree to the Privacy Policy' button
+    @FindBy(css = "input[name='agree']")
+    WebElement agreeCheckbox;
+
+    //locator for Continue button
+    @FindBy(css = "input[value='Continue']")
+    WebElement continueButton;
+
+    //locator for success message header
+    @FindBy(css = "#common-success #content > h1")
+    WebElement accountCreatedLabel;
 
     public void enterFirstName(String firstName) {
-        Helpers.waitUntilElementIsClickable(driver, firstNameTxtField);
+        waitUntilElementIsClickable(driver, firstNameTxtField);
         firstNameTxtField.sendKeys(firstName);
     }
 
     public void enterLastName(String lastName) {
-        Helpers.waitUntilElementIsClickable(driver, lastNameTxtField);
+        waitUntilElementIsClickable(driver, lastNameTxtField);
         lastNameTxtField.sendKeys(lastName);
     }
 
     public void enterEmail(String email) {
-        Helpers.waitUntilElementIsClickable(driver, emailTxtField);
+        waitUntilElementIsClickable(driver, emailTxtField);
         emailTxtField.sendKeys(email);
     }
 
     public void enterTelephone(String telephone) {
-        Helpers.waitUntilElementIsClickable(driver, telephoneTxtField);
+        waitUntilElementIsClickable(driver, telephoneTxtField);
         telephoneTxtField.sendKeys(telephone);
     }
 
     public void enterPassword(String password) {
-        Helpers.waitUntilElementIsClickable(driver, pwTxtField);
+        waitUntilElementIsClickable(driver, pwTxtField);
         pwTxtField.sendKeys(password);
     }
 
     public void enterPasswordConfirmation(String password) {
-        Helpers.waitUntilElementIsClickable(driver, pwConfirmationTxtField);
+        waitUntilElementIsClickable(driver, pwConfirmationTxtField);
         pwConfirmationTxtField.sendKeys(password);
+    }
+
+    public void checkPrivacyPolicyCheckbox() {
+        waitUntilElementIsClickable(driver, agreeCheckbox);
+        agreeCheckbox.click();
+    }
+
+    public void clickContinueButton() {
+        waitUntilElementIsClickable(driver, continueButton);
+        continueButton.click();
+    }
+
+    public void verifySuccessMessage(String message) {
+        waitForElementVisibility(driver, accountCreatedLabel);
+        Assert.assertEquals(message, accountCreatedLabel.getText());
     }
 }
