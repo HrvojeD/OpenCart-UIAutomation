@@ -12,7 +12,7 @@ public class ChromeDriverManager extends DriverManager{
     true = browser window is hidden and the test steps are not visible
     false = browser window is displayed and the test steps are visible
      */
-    boolean headless = true;
+    boolean headless = false;
 
     //setting ChromeOptions and creating new ChromeDriver
     @Override
