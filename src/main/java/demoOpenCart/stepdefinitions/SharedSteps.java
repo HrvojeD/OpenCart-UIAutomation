@@ -25,16 +25,14 @@ public class SharedSteps {
         sharedPagePO.clickRegisterButton();
     }
 
-    @And("clicks the Login button")
-    public void clicksTheLoginButton() {
-        sharedPagePO.clickMyAccountButton()
-                    .clickLoginButton();
+    @And("clicks the Login header button")
+    public void clickLoginHeaderButton() {
+        sharedPagePO.clickLoginHeaderButton();
     }
 
     @And("click the Logout button")
     public void clickTheLogoutButton() {
-        sharedPagePO.clickMyAccountButton()
-                .clickLogoutButton();
+        sharedPagePO.clickLogoutButton();
     }
 
 }

@@ -55,39 +55,46 @@ public class RegisterAccountPO {
     @FindBy(css = "#common-success #content > h1")
     WebElement accountCreatedLabel;
 
-    public void enterFirstName(String firstName) {
+    public RegisterAccountPO enterFirstName(String firstName) {
         waitUntilElementIsClickable(driver, firstNameTxtField);
         firstNameTxtField.sendKeys(firstName);
+        return this;
     }
 
-    public void enterLastName(String lastName) {
+    public RegisterAccountPO enterLastName(String lastName) {
         waitUntilElementIsClickable(driver, lastNameTxtField);
         lastNameTxtField.sendKeys(lastName);
+        return this;
     }
 
-    public void enterEmail(String email) {
+    public RegisterAccountPO enterEmail(String email) {
         waitUntilElementIsClickable(driver, emailTxtField);
         emailTxtField.sendKeys(email);
+        return this;
     }
 
-    public void enterTelephone(String telephone) {
+    public RegisterAccountPO enterTelephone(String telephone) {
         waitUntilElementIsClickable(driver, telephoneTxtField);
         telephoneTxtField.sendKeys(telephone);
+        return this;
     }
 
-    public void enterPassword(String password) {
+    public RegisterAccountPO enterPassword(String password) {
         waitUntilElementIsClickable(driver, pwTxtField);
         pwTxtField.sendKeys(password);
+        return this;
     }
 
-    public void enterPasswordConfirmation(String password) {
+    public RegisterAccountPO enterPasswordConfirmation(String password) {
         waitUntilElementIsClickable(driver, pwConfirmationTxtField);
         pwConfirmationTxtField.sendKeys(password);
+        return this;
     }
 
-    public void checkPrivacyPolicyCheckbox() {
+    public RegisterAccountPO checkPrivacyPolicyCheckbox() {
         waitUntilElementIsClickable(driver, agreeCheckbox);
         agreeCheckbox.click();
+        return this;
     }
 
     public void clickContinueButton() {

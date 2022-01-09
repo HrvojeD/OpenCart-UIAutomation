@@ -16,7 +16,7 @@ Feature: Visitor user can search for products
   Scenario Outline: Authenticated user can use the search functionality to search for items
 
     Given user is on store front page
-    And user is logged in to the store
+    And user is logged in
     When user types <item> in the search bar
     And clicks the Search button
     Then results will appear

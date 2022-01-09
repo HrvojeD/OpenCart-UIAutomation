@@ -21,16 +21,23 @@ public class Helpers {
 
     //function that checks if the element is visible on the page
     public static void waitForElementVisibility(WebDriver driver, WebElement element) {
-        new WebDriverWait(driver, Duration.ofSeconds(1))
+        new WebDriverWait(driver, Duration.ofSeconds(6))
                 .pollingEvery(Duration.ofMillis(100))
                 .until(ExpectedConditions.visibilityOf(element));
     }
 
     //function that checks if the element is clickable
     public static void waitUntilElementIsClickable(WebDriver driver, WebElement element) {
-        new WebDriverWait(driver, Duration.ofSeconds(1))
+        new WebDriverWait(driver, Duration.ofSeconds(6))
                 .pollingEvery(Duration.ofMillis(100))
                 .until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    //function that checks if the wanted text is displayed
+    public static void waitUntilTextIsDisplayed(WebDriver driver, WebElement element, String text) {
+        new WebDriverWait(driver, Duration.ofSeconds(6))
+                .pollingEvery(Duration.ofMillis(100))
+                .until(ExpectedConditions.textToBePresentInElement(element, text));
     }
 
     //function that takes the screenshot every time one of the test steps fails

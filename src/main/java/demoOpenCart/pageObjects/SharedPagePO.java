@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static demoOpenCart.util.Helpers.waitUntilElementIsClickable;
+import static demoOpenCart.util.Helpers.*;
 
 public class SharedPagePO {
 
@@ -20,9 +20,9 @@ public class SharedPagePO {
     @FindBy(css = ".fa-user")
     WebElement myAccountButton;
 
-    //locator for Login button
-    @FindBy(xpath = "//li/a[contains(text(),'Login')]")
-    WebElement loginButton;
+    //locator for Login button in the header
+    @FindBy(xpath = "//ul[@class='dropdown-menu dropdown-menu-right']/li/a[contains(text(),'Login')]")
+    WebElement loginHeaderButton;
 
     //locator for Logout button
     @FindBy(xpath = "//li/a[contains(text(),'Logout')]")
@@ -55,9 +55,9 @@ public class SharedPagePO {
     }
 
     //click the Login button to log into a store
-    public void clickLoginButton() {
-        waitUntilElementIsClickable(driver, loginButton);
-        loginButton.click();
+    public void clickLoginHeaderButton() {
+        waitUntilElementIsClickable(driver, loginHeaderButton);
+        loginHeaderButton.click();
     }
 
     //click the Logout button to log out of a store
