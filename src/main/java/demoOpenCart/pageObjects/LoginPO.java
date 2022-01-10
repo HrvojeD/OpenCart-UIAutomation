@@ -2,7 +2,6 @@ package demoOpenCart.pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.devtools.v85.page.Page;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -30,18 +29,21 @@ public class LoginPO {
     WebElement loginButton;
 
 
+    //type email adress in the Email field
     public LoginPO enterEmail(String email) {
         waitUntilElementIsClickable(driver, emailTxtField);
         emailTxtField.sendKeys(email);
         return this;
     }
 
+    //type password in the Password field
     public LoginPO enterPassword(String password) {
         waitUntilElementIsClickable(driver, pwTxtField);
         pwTxtField.sendKeys(password);
         return this;
     }
 
+    //click the Login button to login
     public void clickLoginButton() {
         waitUntilElementIsClickable(driver, loginButton);
         loginButton.click();

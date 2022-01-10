@@ -10,7 +10,7 @@ import static demoOpenCart.util.Helpers.waitForElementVisibility;
 
 public class AccountPO {
 
-    WebDriver driver;
+    private final WebDriver driver;
 
     public AccountPO(WebDriver driver) {
         this.driver = driver;

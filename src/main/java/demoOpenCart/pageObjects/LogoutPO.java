@@ -17,6 +17,7 @@ public class LogoutPO {
         PageFactory.initElements(driver, this);
     }
 
+    //locator for 'You have been logged off...' message after logging out
     @FindBy(xpath = "//div[@id='content']/p[contains(text(),'You have been logged off')]")
     WebElement loggedOffLabel;
 

@@ -1,6 +1,5 @@
 package demoOpenCart.pageObjects;
 
-import demoOpenCart.util.Helpers;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -55,53 +54,63 @@ public class RegisterAccountPO {
     @FindBy(css = "#common-success #content > h1")
     WebElement accountCreatedLabel;
 
+
+    //type first name in the First Name field on the registration form
     public RegisterAccountPO enterFirstName(String firstName) {
         waitUntilElementIsClickable(driver, firstNameTxtField);
         firstNameTxtField.sendKeys(firstName);
         return this;
     }
 
+    //type last name in the Last Name field on the registration form
     public RegisterAccountPO enterLastName(String lastName) {
         waitUntilElementIsClickable(driver, lastNameTxtField);
         lastNameTxtField.sendKeys(lastName);
         return this;
     }
 
+    //type email in the Email field on the registration form
     public RegisterAccountPO enterEmail(String email) {
         waitUntilElementIsClickable(driver, emailTxtField);
         emailTxtField.sendKeys(email);
         return this;
     }
 
+    //type telephone number in the Telephone field on the registration form
     public RegisterAccountPO enterTelephone(String telephone) {
         waitUntilElementIsClickable(driver, telephoneTxtField);
         telephoneTxtField.sendKeys(telephone);
         return this;
     }
 
+    //type password in the Password field on the registration form
     public RegisterAccountPO enterPassword(String password) {
         waitUntilElementIsClickable(driver, pwTxtField);
         pwTxtField.sendKeys(password);
         return this;
     }
 
+    //type password in the Confirm Password field on the registration form
     public RegisterAccountPO enterPasswordConfirmation(String password) {
         waitUntilElementIsClickable(driver, pwConfirmationTxtField);
         pwConfirmationTxtField.sendKeys(password);
         return this;
     }
 
+    //check the 'Agree to Privacy Policy' checkbox
     public RegisterAccountPO checkPrivacyPolicyCheckbox() {
         waitUntilElementIsClickable(driver, agreeCheckbox);
         agreeCheckbox.click();
         return this;
     }
 
+    //click the Continue button to finish registration
     public void clickContinueButton() {
         waitUntilElementIsClickable(driver, continueButton);
         continueButton.click();
     }
 
+    //verify message that is displayed after clicking Continue on the registration form
     public void verifySuccessMessage(String message) {
         waitForElementVisibility(driver, accountCreatedLabel);
         Assert.assertEquals(message, accountCreatedLabel.getText());

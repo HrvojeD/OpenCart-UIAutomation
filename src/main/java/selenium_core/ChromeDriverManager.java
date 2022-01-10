@@ -9,12 +9,12 @@ public class ChromeDriverManager extends DriverManager{
     /*
     Set whether you want the browser windows to be visible during the tests or not
 
-    true = browser window is hidden and the test steps are not visible
-    false = browser window is displayed and the test steps are visible
+    true = browser window is hidden and the test step execution is not visible
+    false = browser window is displayed and the test step execution is visible
      */
     boolean headless = false;
 
-    //setting ChromeOptions and creating new ChromeDriver
+    //setting ChromeOptions and creating new ChromeDriver with specified options
     @Override
     protected void createWebDriver() {
         ChromeOptions options = new ChromeOptions();

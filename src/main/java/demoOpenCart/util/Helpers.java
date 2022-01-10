@@ -20,28 +20,27 @@ public class Helpers {
     private Helpers() {}
 
     //function that checks if the element is visible on the page
-    public static void waitForElementVisibility(WebDriver driver, WebElement element) {
-        new WebDriverWait(driver, Duration.ofSeconds(6))
+    public static void waitForElementVisibility(WebDriver driver,
+                                                WebElement element) {
+        new WebDriverWait(driver, 6)
                 .pollingEvery(Duration.ofMillis(100))
                 .until(ExpectedConditions.visibilityOf(element));
     }
 
     //function that checks if the element is clickable
-    public static void waitUntilElementIsClickable(WebDriver driver, WebElement element) {
-        new WebDriverWait(driver, Duration.ofSeconds(6))
+    public static void waitUntilElementIsClickable(WebDriver driver,
+                                                   WebElement element) {
+        new WebDriverWait(driver, 6)
                 .pollingEvery(Duration.ofMillis(100))
                 .until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    //function that checks if the wanted text is displayed
-    public static void waitUntilTextIsDisplayed(WebDriver driver, WebElement element, String text) {
-        new WebDriverWait(driver, Duration.ofSeconds(6))
-                .pollingEvery(Duration.ofMillis(100))
-                .until(ExpectedConditions.textToBePresentInElement(element, text));
-    }
-
-    //function that takes the screenshot every time one of the test steps fails
-    public static void takeScreenshotOnFailure(WebDriver driver, Scenario scenario) {
+    /*
+    function that takes the screenshot every time one of the test steps fails and saves it
+    in the resources/error_screenshots/ folder in the .png format
+     */
+    public static void takeScreenshotOnFailure(WebDriver driver,
+                                               Scenario scenario) {
         if (scenario.isFailed()) {
             try {
                 File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

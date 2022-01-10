@@ -6,8 +6,12 @@ import selenium_core.DriverManager;
 import selenium_core.DriverManagerFactory;
 
 import static selenium_core.DriverType.CHROME;
+import static selenium_core.DriverType.FIREFOX;
 
 public class TestInitialization {
+
+    //explicit private constructor
+    private TestInitialization() {}
 
     public static DriverManager driverManager;
     public static WebDriver driver;
@@ -19,11 +23,16 @@ public class TestInitialization {
     public static LogoutPO logoutPO;
     public static LoginPO loginPage;
 
+    /*
+    Getting the specified driver.
+    Supported drivers can be found in the DriverType enum in the selenium_core package.
+     */
     public static void getDriver() {
-        driverManager = DriverManagerFactory.getDriverManager(CHROME);
+        driverManager = DriverManagerFactory.getDriverManager(FIREFOX);
         driver = driverManager.getWebDriver();
     }
 
+    //creating instances of all page objects
     public static void setUpPageObjects() {
         registerAccountPO = new RegisterAccountPO(driver);
         searchResultPO = new SearchResultPO(driver);
@@ -34,6 +43,7 @@ public class TestInitialization {
 
     }
 
+    //tear down the driver object
     public static void tearDown() {
         driverManager.quitWebDriver();
     }

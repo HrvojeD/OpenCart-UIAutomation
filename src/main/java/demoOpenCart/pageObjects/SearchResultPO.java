@@ -21,6 +21,7 @@ public class SearchResultPO {
     @FindBy(css = ".product-thumb")
     WebElement productDiv;
 
+
     //check if the search was successful
     public void isSearchResultDisplayed() {
         waitForElementVisibility(driver, productDiv);
