@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="RunTests" type="JUnit" factoryName="JUnit">
+    <module name="OpenCartUI.main" />
+    <option name="ALTERNATIVE_JRE_PATH" value="17" />
+    <option name="PACKAGE_NAME" value="demoOpenCart.testRunner" />
+    <option name="MAIN_CLASS_NAME" value="demoOpenCart.testRunner.RunTests" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="class" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
