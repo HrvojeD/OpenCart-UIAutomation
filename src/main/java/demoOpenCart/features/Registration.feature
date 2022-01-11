@@ -17,6 +17,6 @@ Feature: Registration of a new user
 
     Examples:
       | firstname | lastname | email                 | telephone | password |
-      | John      | Doe      | 55johndoe@example.com | 123456    | qwe123   |
-      | Jane      | Doe      | 55janedoe@example.com | 654321    | 123qwe   |
-      | Nomen     | Nescio   | 55nomen@example.com   | 111222    | 1pw2pw   |
+      | John      | Doe      | johndoe1390@example.com | 123456    | qwe123   |
+      | Jane      | Doe      | janedoe2480@example.com | 654321    | 123qwe   |
+      | Nomen     | Nescio   | nomen4970@example.com   | 111222    | 1pw2pw   |
