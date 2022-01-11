@@ -31,7 +31,7 @@ public class TestInitialization {
     with enum of the wanted browser.
      */
     public static void getDriver() {
-        driverManager = DriverManagerFactory.getDriverManager(FIREFOX);
+        driverManager = DriverManagerFactory.getDriverManager(CHROME);
         driver = driverManager.getWebDriver();
     }
 
