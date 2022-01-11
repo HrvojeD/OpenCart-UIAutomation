@@ -26,6 +26,9 @@ public class TestInitialization {
     /*
     Getting the specified driver.
     Supported drivers can be found in the DriverType enum in the selenium_core package.
+
+    To change the browser in which tests are executing, replace getDriverManager() argument
+    with enum of the wanted browser.
      */
     public static void getDriver() {
         driverManager = DriverManagerFactory.getDriverManager(FIREFOX);
