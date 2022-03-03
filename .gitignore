@@ -146,3 +146,5 @@ gradle-app.setting
 /resources/error_screenshots/*.png
 /.gradle/
 /.idea/
+
+.DS_Store

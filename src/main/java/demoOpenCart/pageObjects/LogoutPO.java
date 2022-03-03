@@ -1,7 +1,6 @@
 package demoOpenCart.pageObjects;
 
 import demoOpenCart.util.Helpers;
-import demoOpenCart.util.Settings;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
