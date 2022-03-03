@@ -3,7 +3,7 @@
  Automation of test cases written in [Gherkin](https://cucumber.io/docs/gherkin/) using [Selenium](https://www.selenium.dev) and [Cucumber](https://cucumber.io/docs/cucumber/). 
  Assertions are made using [JUnit 4](https://junit.org/junit4/).
 
- Solution uses [PageObjectModel](https://junit.org/junit4/) design pattern and currently supports execution in Chrome and Firefox browsers.
+ Solution uses [PageObjectModel](https://www.selenium.dev/documentation/test_practices/encouraged/page_object_models/) design pattern and currently supports execution in Chrome and Firefox browsers.
 
  Provide an overview of the directory structure and files, for example:
 
