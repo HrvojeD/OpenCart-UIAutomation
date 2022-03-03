@@ -29,7 +29,7 @@ public class LoginPO {
     WebElement loginButton;
 
 
-    //type email adress in the Email field
+    //type email address in the Email field
     public LoginPO enterEmail(String email) {
         waitUntilElementIsClickable(driver, emailTxtField);
         emailTxtField.sendKeys(email);
