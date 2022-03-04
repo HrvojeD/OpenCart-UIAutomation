@@ -6,8 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static demoOpenCart.util.Helpers.waitForElementVisibility;
-import static demoOpenCart.util.Helpers.waitUntilElementIsClickable;
+import static demoOpenCart.util.ElementVisibilityUtil.waitForElementVisibility;
+import static demoOpenCart.util.ElementVisibilityUtil.waitUntilElementIsClickable;
 
 public class RegisterAccountPO {
 

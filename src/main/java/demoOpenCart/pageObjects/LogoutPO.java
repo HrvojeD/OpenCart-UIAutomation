@@ -1,6 +1,6 @@
 package demoOpenCart.pageObjects;
 
-import demoOpenCart.util.Helpers;
+import demoOpenCart.util.ElementVisibilityUtil;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,7 +23,7 @@ public class LogoutPO {
 
     //verify if the correct label displayed
     public void verifyLogoutLabelIsDisplayed(String label) {
-        Helpers.waitForElementVisibility(driver, loggedOffLabel);
+        ElementVisibilityUtil.waitForElementVisibility(driver, loggedOffLabel);
         Assert.assertTrue(loggedOffLabel.getText().contains(label));
     }
 }

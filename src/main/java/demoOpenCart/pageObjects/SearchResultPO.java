@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static demoOpenCart.util.Helpers.waitForElementVisibility;
+import static demoOpenCart.util.ElementVisibilityUtil.waitForElementVisibility;
 
 public class SearchResultPO {
 

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static demoOpenCart.util.Helpers.*;
+import static demoOpenCart.util.ElementVisibilityUtil.*;
 
 public class SharedPagePO {
 

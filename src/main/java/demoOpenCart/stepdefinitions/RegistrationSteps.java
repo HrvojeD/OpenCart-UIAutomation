@@ -8,34 +8,34 @@ import static demoOpenCart.util.TestInitialization.registerAccountPO;
 
 public class RegistrationSteps {
 
-    @And("^enters (.*) in the First Name field")
-    public void entersFirstnameInTheFirstNameField(String firstname) {
-        registerAccountPO.enterFirstName(firstname);
+    @And("enters firstname in the First Name field")
+    public void entersFirstnameInTheFirstNameField() {
+        registerAccountPO.enterFirstName(Settings.FIRST_NAME);
     }
 
-    @And("^enters (.*) in the Last Name field")
-    public void entersLastnameInTheLastNameField(String lastname) {
-        registerAccountPO.enterLastName(lastname);
+    @And("enters lastname in the Last Name field")
+    public void entersLastnameInTheLastNameField() {
+        registerAccountPO.enterLastName(Settings.LAST_NAME);
     }
 
-    @And("^enters (.*) in the Email address field")
-    public void entersEmailInTheEmailAddressField(String email) {
-        registerAccountPO.enterEmail(email);
+    @And("enters email in the Email address field")
+    public void entersEmailInTheEmailAddressField() {
+        registerAccountPO.enterEmail();
     }
 
-    @And("^enters (.*) in the Telephone field")
-    public void entersTelephoneInTheTelephoneField(String telephone) {
-        registerAccountPO.enterTelephone(telephone);
+    @And("enters telephone in the Telephone field")
+    public void entersTelephoneInTheTelephoneField() {
+        registerAccountPO.enterTelephone(Settings.TELEPHONE);
     }
 
-    @And("^enters (.*) in the Password field")
-    public void entersPasswordInThePasswordField(String password) {
-        registerAccountPO.enterPassword(password);
+    @And("enters password in the Password field")
+    public void entersPasswordInThePasswordField() {
+        registerAccountPO.enterPassword(Settings.PASSWORD);
     }
 
-    @And("^enters (.*) in the Password Confirm field")
-    public void entersPasswordInThePasswordConfirmField(String password) {
-        registerAccountPO.enterPasswordConfirmation(password);
+    @And("enters password in the Password Confirm field")
+    public void entersPasswordInThePasswordConfirmField() {
+        registerAccountPO.enterPasswordConfirmation(Settings.PASSWORD);
     }
 
     @And("checks the Privacy Policy checkbox")
