@@ -1,5 +1,6 @@
 package demoOpenCart.stepdefinitions;
 
+import demoOpenCart.util.EmailFactoryUtil;
 import demoOpenCart.util.Settings;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -20,7 +21,7 @@ public class RegistrationSteps {
 
     @And("enters email in the Email address field")
     public void entersEmailInTheEmailAddressField() {
-        registerAccountPO.enterEmail();
+        registerAccountPO.enterEmail(EmailFactoryUtil.createNewEmailAddress());
     }
 
     @And("enters telephone in the Telephone field")

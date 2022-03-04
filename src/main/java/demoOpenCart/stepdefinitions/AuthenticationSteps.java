@@ -1,5 +1,6 @@
 package demoOpenCart.stepdefinitions;
 
+import demoOpenCart.util.EmailFactoryUtil;
 import demoOpenCart.util.Settings;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -9,14 +10,18 @@ import static demoOpenCart.util.TestInitialization.*;
 
 public class AuthenticationSteps {
 
-    @And("user is already registered")
+    String generatedEmail = EmailFactoryUtil.createNewEmailAddress();
+
+    @Given("user is already registered")
     public void userIsAlreadyRegistered() {
+        driver.get(Settings.STORE_FRONT_PAGE);
+
         sharedPagePO.clickMyAccountButton()
                     .clickRegisterButton();
 
         registerAccountPO.enterFirstName(Settings.FIRST_NAME)
                          .enterLastName(Settings.LAST_NAME)
-                         .enterEmail(Settings.EMAIL)
+                         .enterEmail(generatedEmail)
                          .enterTelephone(Settings.TELEPHONE)
                          .enterPassword(Settings.PASSWORD)
                          .enterPasswordConfirmation(Settings.PASSWORD)
@@ -29,7 +34,7 @@ public class AuthenticationSteps {
 
     @And("enters valid credentials")
     public void entersValidCredentials() {
-        loginPage.enterEmail(Settings.EMAIL)
+        loginPage.enterEmail(generatedEmail)
                  .enterPassword(Settings.PASSWORD);
     }
 
@@ -44,7 +49,7 @@ public class AuthenticationSteps {
         sharedPagePO.clickMyAccountButton()
                     .clickLoginHeaderButton();
 
-        loginPage.enterEmail(Settings.EMAIL)
+        loginPage.enterEmail(generatedEmail)
                  .enterPassword(Settings.PASSWORD)
                  .clickLoginButton();
     }
